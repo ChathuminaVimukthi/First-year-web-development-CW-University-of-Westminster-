@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>profile</title>  <!-- title of the web page -->
+
+
+    <!-- CSS functions list, creating blocks of calsses to make the page viewable -->
+    <style>
+        /*adding font face and font size to h1*/
+        h1{
+            font-family: Papyrus, fantasy;
+            background-color: black;
+            color: white;
+            text-align:left;
+            font-size: 40px;
+            margin: 0px 117px 10px 80px;
+            padding: 16px 32px;
+
+        }
+        /*styling the container where the image and description is shown*/
+        .demo-2 {
+            position:relative;
+            width:260px;
+            height:300px;
+            overflow:hidden;
+            float:left;
+            margin-right:20px;
+            background-color:white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .demo-2 p,.demo-2 h2 {
+            color:black;
+            padding:10px;
+            left:-20px;
+            top:20px;
+            position:relative
+        }
+        .demo-2 p {
+            font-family:'Lato';
+            font-size:12px;
+            line-height:18px;
+            margin:0
+        }
+        .demo-2 h2 {
+            font-size:20px;
+            line-height:20px;
+            margin:0;
+            font-family:'Lato'
+        }
+        /*adding effects to the pictures displayed and adding transition effects*/
+        .effect img {
+            position:absolute;
+            left:0;
+            bottom:0;
+            cursor:pointer;
+            margin:-12px 0;
+            -webkit-transition:bottom .3s ease-in-out;
+            -moz-transition:bottom .3s ease-in-out;
+            -o-transition:bottom .3s ease-in-out;
+            transition:bottom .3s ease-in-out
+
+        }
+        /*adding hover effect */
+        .effect img.top:hover {
+            bottom:-150px;
+            padding-top:100px
+        }
+        /*adjusting the margins of the images displayed*/
+        .pics
+        {
+            margin-top:5cm;
+            margin-left:2cm;
+        }
+        /*setting size of the logo*/
+        .logo{
+            margin-top:-2.76cm;
+            float: left;
+            width: 95px;
+            height: 94px;
+
+        }
+
+        a:link {
+            color: white;
+        }
+        /*changimng the colour of the link once it has been visited*/
+        a:visited{
+            color:ghostwhite;
+            background-color:transparent;
+        }
+        a:link{
+            text-decoration: none;
+        }
+        /*styling the dropdown box button*/
+        .dropbtn {
+            background-color: black;
+            color: white;
+            padding: 38px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        /*styling the drop down box*/
+        .dropdown {
+            margin-left: 34.55cm;
+            margin-top: -2.74cm;
+            position: absolute;
+            display: inline-block;
+        }
+
+        /* styling the content displayed in the drop down box*/
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /*adding hover effect to the content in the droop down box*/
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /*changing the color of the dropdown once the drop down box is hovered*/
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+
+
+    </style>
+    <header>
+    <h1>Student Details</h1>
+
+<!--drop down menu for navigation -->
+<div class="dropdown">
+    <button class="dropbtn">Go to</button>
+    <div class="dropdown-content">
+        <a href="Byproducts.html">Tours And Packages</a>
+        <a href="Quiz.html">Quiz</a>
+        <a href="Comments.html">Add a Comment</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="SiteMap.html">Site Map</a>
+        
+        
+    </div>
+</div>
+    </header>
+</head>
+    
+<body background="Images/6.jpg" >
+
+
+<!--setting the logo-->
+<div class="container">
+    <a href="MP1.html">
+        <img class="logo" src="Images/LOGO.jpg">
+    </a>
+</div>
+<div class="pics">
+
+    <ul class="demo-2 effect">
+
+        <center><h2>CHATHUMINA</h2></center>
+        <center><p>STUDENT 01<br/> chathumina.2016238@it.ac.lk <br/>w1628067</br>click to more</p></center>
+
+        <a href="Chathumina.html"><img class="top" src="Images/Chathumina.jpg" width="300px" height="300px"alt=""/></a>
+    </ul>
+
+
+    <ul class="demo-2 effect">
+
+        <center><h2>CHARANA</h2></center>
+        <center><p>STUDENT 02<br/>charana.2016139@iit.ac.lk</br>w1626663</br>click to more</p></center>
+
+        <a href="Charana.html"><img class="top" src="Images/Charana.jpg" width="300px" height="300px"alt=""/></a>
+    </ul>
+
+    <ul class="demo-2 effect">
+
+        <center><h2>KAVINDA</h2></center>
+        <center><p>STUDENT 03<br/>kavinda.2016014@iit.ac.lk</br>w1626646</br>click to more</p></center>
+
+        <a href="Kavinda.html"><img class="top" src="Images/Kavinda.jpg" width="300px" height="300px" alt=""/></a>
+    </ul>
+
+    <ul class="demo-2 effect">
+
+        <center><h2>SADUN</h2></center>
+        <center><p>STUDENT 04<br/>sandun.2016003@iit.ac.lk</br>w1626708</br>click to more</p></center>
+
+        <a href="Sandun.html"><img class="top" src="Images/Sandun.jpg" width="300px" height="300px"alt=""/></a>
+    </ul>
+
+</div>
+
+
+
+</body>
+
+
+
+</html>

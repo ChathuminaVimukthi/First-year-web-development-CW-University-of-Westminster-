@@ -1,0 +1,147 @@
+body {font-family: Verdana,sans-serif;}/*for the whole body content*/
+.container {
+    position: relative;
+    width: 100%;
+}
+
+/*for the h1 tag*/
+h1{
+font-family: Papyrus, fantasy;
+background-color: black;
+color: white;
+text-align:left;
+font-size: 40px;
+margin: 0px 117px 10px 80px;
+  padding: 16px 32px;
+
+}
+
+.logo{
+    margin-top:-2.74cm;
+    float: left;
+    
+    width: 95px;
+    height: 94px;
+            
+        }
+
+/*hovering effect*/
+.container:hover .image {
+  opacity: 0.8;
+}
+ 
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+/*fading out animation*/
+.elementToFadeOut {
+    -webkit-animation: fadeout 3s linear 1 forwards;
+    animation: fadeout 3s linear 1 forwards;
+}
+
+@-webkit-keyframes fadeout {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+75%{ opacity: 1; }
+  100% { opacity: 0; }
+}
+    
+/*modifying seperately created classes*/
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text {
+  
+  background-color: #f2f2f2;
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+/*modifying the links*/
+
+    a {
+    -webkit-transition: .5s .01s;
+    }
+    a:visited{
+        color:black;
+        background-color:transparent;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    a:hover {
+        font-size: 30px;
+    }
+/*drop down navigation */
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 38px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    margin-left: 34.55cm;
+    margin-top: -2.74cm;
+    position: absolute;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/*link for the cv*/
+ .goUp1{
+    float: right;
+    
+    margin-bottom: 1cm;
+    background-color:white;
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+  
+            
+    }   

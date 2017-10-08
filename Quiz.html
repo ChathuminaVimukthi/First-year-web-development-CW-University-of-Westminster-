@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="utf-8"/>
+        <title>Quiz</title>
+        <style>
+            /*CSS functions list, creating blocks of classes to make the page viewable*/
+			h1{
+                margin-top: -2.75cm;
+                font-family: Papyrus, fantasy;
+                background-color: black;
+                color: white;
+                text-align:left;
+                font-size: 40px;
+                margin: 0px 0px 9px 90px;
+                padding: 16px 32px;
+
+            }
+            /*CSS functions class to which activate when the user gives a right answer*/
+            .right
+            {
+                width: 500px;
+                padding: 50px;
+                border: 5px solid gray;
+                margin: auto;
+                background-color: #afa;}
+            .wrong
+            {
+                width: 500px;
+                padding: 50px;
+                border: 5px solid gray;
+                margin: auto;
+                background-color: #faa;}
+            /*padding use to seperate or linning the web for easy reading*/
+            .padding{
+                width: 500px;
+                padding: 50px;
+                border: 5px solid gray;
+                margin: auto;
+            }
+			 .logo{
+			 
+                margin-top:-2.73cm;
+                float: left;
+                width: 95px;
+                height: 94px;
+            
+            }
+            /*drop down navigation*/
+            .dropbtn {
+                background-color: black;
+                color: white;
+                padding: 38px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .dropdown {
+                margin-left: 34.55cm;
+                margin-top: -2.73cm;
+                position: absolute;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+            
+            .goUp1{
+                float: right;
+                margin-bottom: 1cm;
+                background-color:white;
+                color: white;
+                font-size: 16px;
+                padding: 16px 32px;
+  
+            }
+            a:link {
+                color: black;
+            }
+            a:visited{
+                color:black;
+                background-color:transparent;
+            }
+            a:link{
+                text-decoration: none;
+            }
+            .demo{
+                margin-top: 6cm;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--drop down navigation-->
+        <h1 align="center">Quiz</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Go to</button>
+            <div class="dropdown-content">
+                <a href="Byproducts.html">Tours and Packages</a>
+                <a href="Quiz.html">Quiz</a>
+                <a href="Comments.html">Add a Comment</a>
+                <a href="StudentDetails.html">Student Details</a>
+                <a href="Sitemap.html">Site Map</a>
+    
+            </div>
+        </div>
+        
+        <div class="container">
+            <a href="MP1.html">
+            <img class="logo" src="Images/LOGO.jpg">
+            </a>
+            </div>
+        <!--buttons to start reset and reload-->
+        <input type="button"  value="Start" onclick="start();"/>
+        <input type="button"  value="OK" onclick="validation();"/>
+        
+        <h2 id="score"></h2>
+        <div>    
+        <p id="demo" style="display:none">You have </p>
+        <p id ="gover" style="display:none">seconds left </p>
+        </div>
+        <!--quessions-->
+        <div id="quiz">
+
+            <div class="padding"> <p>Question 1</p> <p>How was Sri Lanka formerly known?</p> 
+                <label><input type="radio" name="q1" value="p"/>Jakartha</label><br/> 
+                <label><input type="radio" name="q1" value="y"/>Persia</label><br/> 
+                <label><input type="radio" name="q1" value="x"/>Ceylon</label><br/>
+                <label><input type="radio" name="q1" value="m"/>Egypt</label><br/> 
+
+
+            </div>
+				<div class="padding"> <p>Question 2</p> <p>What is the capital of Sri Lanka?</p>
+                <label><input type="radio" name="q2" value="d"/>Trincomalee</label><br/>
+                <label><input type="radio" name="q2" value="f"/>Kandy</label><br/>
+                <label><input type="radio" name="q2" value="y"/>jaffna</label><br/> 				
+                <label><input type="radio" name="q3" value="x"/>Sri Jayawardenepura Kotte</label>				
+            </div>
+        
+
+
+            <div class="padding"> <p>Question 3</p> <p>What is the largest elephant orphanage situated?</p>
+                <label><input type="radio" name="q3" value="d"/>Badulla</label><br/>
+                <label><input type="radio" name="q3" value="x"/>Pinnawala</label><br/>
+                <label><input type="radio" name="q3" value="j"/>Kandy</label><br/> 				
+                <label><input type="radio" name="q3" value="y"/>Rathnapura</label>				
+            </div>
+
+
+            <div class="padding"> <p>Question 4</p> <p>From below, what is not a sacred town in Sri Lanka ?</p>
+                <label><input type="radio" name="q4" value="d"/>Anuradhapura</label><br/>
+                <label><input type="radio" name="q4" value="f"/>Kandy</label><br/>
+                <label><input type="radio" name="q4" value="x"/>Colombo</label><br/> 				
+                <label><input type="radio" name="q4" value="y"/>Katharagama</label>				
+            </div>
+
+		    <div class="padding"> <p>Question 5</p> <p> Which is the currency of Sri Lanka?</p> 
+                <label><input type="radio" name="q5" value="r"/>Baht</label><br/> 
+                <label><input type="radio" name="q5" value="s"/>Srilsnksn dollers</label><br/>
+                <label><input type="radio" name="q5" value="l"/>Yen</label><br/> 
+                <label><input type="radio" name="q5" value="x"/>Rupee</label><br/>
+			</div>
+
+            <div class="padding"> <p>Question 6</p> <p>Where is the natural harbour situated in Sri Lanka?</p>
+                <label><input type="radio" name="q6" value="a"/>Galle</label><br/>
+                <label><input type="radio" name="q6" value="x"/>Trincomalee</label><br/>
+                <label><input type="radio" name="q6" value="y"/>Colombo</label><br/> 				
+                <label><input type="radio" name="q6" value="f"/>Hambanthota</label>				
+            </div>
+
+            <div class="padding"> <p>Question 7</p> <p>Which historical place was included in the seven wonders of the world?</p>
+                <label><input type="radio" name="q7" value="a"/>Sri padaya</label><br/>
+                <label><input type="radio" name="q7" value="t"/>Mihinthalaya</label><br/>
+                <label><input type="radio" name="q7" value="f"/>Temple of the tooth relic</label><br/> 				
+                <label><input type="radio" name="q7" value="x"/>Seegiriya</label>				
+            </div>
+
+            <div class="padding"> <p>Question 8</p> <p>What is the national main language?</p>
+                <label><input type="radio" name="q8" value="a"/>English</label><br/>
+                <label><input type="radio" name="q8" value="x"/>Sinhala</label><br/>
+                <label><input type="radio" name="q8" value="f"/>Hindi</label><br/> 				
+                <label><input type="radio" name="q8" value="t"/>Spanish</label>				
+            </div>
+
+
+            <div class="padding"> <p>Question 9</p> <p>Hikkaduwa is known for?</p>
+                <label><input type="radio" name="q9" value="a"/>Rain Forest</label><br/>
+                <label><input type="radio" name="q9" value="x"/>Coral Reefs</label><br/>
+                <label><input type="radio" name="q9" value="f"/>Masks</label><br/> 				
+                <label><input type="radio" name="q9" value="t"/>Dutch fort</label>				
+            </div>
+
+
+            <div class="padding"> <p>Question 10</p> <p>What is not a neighbour country of Sri Lanka</p>
+                <label><input type="radio" name="q10" value="a"/>Bangaladesh</label><br/>
+                <label><input type="radio" name="q10" value="x"/>Cuba</label><br/>
+                <label><input type="radio" name="q10" value="f"/>Pakistan</label><br/> 				
+                <label><input type="radio" name="q10" value="t"/>Buthan</label>				
+            </div>
+        <input type="button" value="Reload" onclick="window.location.reload();"/>
+        <a class="goUp1" href="Kavinda.html">Kavinda</a> 
+        
+        
+        <script>
+            var myVar = setInterval(function () {myTimer()}, 1000);
+            var d = 220;//declairing the timer method to set the timer to answer the quiz
+            
+            
+            //checking the users answers right or wrong
+            function validation() {
+                var radios = document.getElementById("quiz").getElementsByTagName("input");
+                var right = 0;
+                var wrong = 0;
+                for (var i = 0, len = radios.length; i < len; i++) {
+                    if (radios[i].value == "x") {//checking the users answer is right or wrong
+                        if (radios[i].checked == true) {
+                            right++;//counting the correct answers
+                            radios[i].parentElement.parentElement.className = "right";
+                        } else {
+                            wrong++;//counting the wrong answers 
+                            radios[i].parentElement.parentElement.className = "wrong";
+                        }
+                    }
+                }
+                
+                var total = (right * 2) + (wrong * (-1));//calculate the total marks
+				var timetaken = 220-d;//calculating the time taken
+                clearTimeout(myVar);
+                
+                
+                //displaying the processed outputs
+                document.getElementById("score").innerHTML =  "Coorrect Answers: "  + right +"<br/>Wrong Answers: " + wrong+ "<br/>Total Marks: "+total+"<br/>Time taken :"+timetaken+ "seconds";
+				
+				document.getElementById("gover").innerHTML ="GAME OVER";
+				document.getElementById("demo").innerHTML ="";
+                
+				//changing the background color according to the validity of the users answers
+				var percentage = (100*right/(wrong+right)).toFixed(1);
+                
+                if(percentage<50){
+                    document.body.style.backgroundColor = "#ff3232";
+                }else{
+                    document.body.style.backgroundColor = "#33ff33";
+                }
+                
+            }
+
+            function relode() {
+                var radios = document.getElementById("quiz").getElementsByTagName("INPUT");
+                for (var i = 0, len = radios.length; i < len; i++) {
+                    radios[i].checked = false;
+                    if (radios[i].value == "x") {
+                        radios[i].parentNode.parentNode.className = '';
+                    }
+                }
+                document.getElementById("score").innerHTML = '';
+            }
+
+            //starting the quiz when the start buttn pressed 
+            function start(){
+                document.getElementById("demo").style="display:block" ;
+                document.getElementById("gover").style="display:block" ;
+         
+                myTimer();
+           
+            }
+             function myTimer() {
+                document.getElementById("demo").innerHTML = d--;
+
+                if (d < 0) {
+                    alert("Times up");
+                    window.location.reload();
+                }
+
+            }
+        </script>
+
+
+    </body>   
+</html>

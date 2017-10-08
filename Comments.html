@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Comments!</title>
+    <meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+    <meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+    	
+    
+    <style>
+        h1{
+                margin-top: -2.75cm;
+                font-family: Papyrus, fantasy;
+                background-color: black;
+                color: white;
+                text-align:left;
+                font-size: 40px;
+                margin: 0px 0px 9px 90px;
+                padding: 16px 32px;
+
+            }
+        
+        .logo{
+                margin-top:-2.73cm;
+                float: left;
+                width: 95px;
+                height: 94px;
+            }
+
+        body {font-family: Verdana,sans-serif;}
+
+        .popup-window {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            
+        }
+
+
+        .popup-window-content {
+            position: relative;
+            background-color: #ffffff;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+
+        @-webkit-keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+
+        @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .popup-window-header {
+            padding: 2px 16px;
+            background-color: #a0c4ff;
+            color: white;
+        }
+
+        .popup-window-body {padding: 2px 16px;}
+
+        .popup-window-footer {
+            padding: 2px 3px;
+        }
+        .dropbtn {
+            background-color: black;
+            color: white;
+            padding: 38px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            margin-left: 34.55cm;
+            margin-top: -2.73cm;
+            position: absolute;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+        }
+    </style>
+</head>
+<!--drop down navigation-->
+    <h1 align="center">Add A Comment</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Go to</button>
+            <div class="dropdown-content">
+                <a href="Byproducts.html">Tours and Packages</a>
+                <a href="Quiz.html">Quiz</a>
+                <a href="Comments.html">Add a Comment</a>
+                <a href="StudentDetails.html">Student Details</a>
+                <a href="Sitemap.html">Site Map</a>
+    
+            </div>
+        </div>
+        
+        <div class="container">
+            <a href="MP1.html">
+            <img class="logo" src="Images/LOGO.jpg">
+            </a>
+            </div>
+<img src="Images/2.jpg" class="image" style="width:100%">
+    
+<body onload="document.registration.userid.focus();">
+  <div class="middle">
+<!--submission form-->
+<form name='registration' onSubmit="return formValidation();">
+    
+        <br><br>
+        <label for="username" align="center">Enter your name:</label>
+        <input type="text" name="username" size="50" if="username"/><br><br>
+
+        <label for="rate">How would you rate us? :</label>
+        <select name="rate" id="rate">
+            <option selected="" value="Default">Select your rating here</option>
+            <option value="Impressed">Impressed</option>
+            <option value="Good">Good. Could use some work</option>
+            <option value="Not very satified">Not very satified</option>
+            <option value="Worst">Worst site ever!</option>
+
+        </select><br><br>
+        <label for="email">Your email address here:</label>
+        <input type="text" name="email" size="50" id="email" /><br><br>
+
+        <label for="comments">Enter your feedback here:</label>
+        <textarea name="desc" id="desc"></textarea><br><br>
+        <input type="submit" name="submit" value="Submit" />
+    
+</form>
+</div>
+<div name="myModal" id="myModal" class="popup-window">
+
+
+    <div class="popup-window-content">
+        <div class="popup-window-header">
+            <span class="close">&times;</span>
+            <h2>User's Feedback</h2>
+        </div>
+        <div class="popup-window-body" id="popup-window-body1">
+            <p id="username">
+
+            </p>
+            <p id="emailadd">
+
+            </p>
+
+            <p id="rrate">
+
+            </p>
+
+            <p id="des">
+
+            </p>
+
+        </div>
+        <div class="popup-window-footer">
+
+            <button id="ok">OK</button>
+            <button id="cancel">Cancel</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div id="thankyou" class="popup-window">
+
+
+    <div class="popup-window-content">
+        <div class="popup-window-header">
+            <span class="close">&times;</span>
+            <h2>Feedback Recieved</h2>
+        </div>
+        <div class="popup-window-body">
+            <p>Thank you for your valueble time.</p>
+        </div>
+        <div class="popup-window-footer">
+
+            <button id="ok1">OK</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+//getting user inputs
+    var username=document.getElementById("username");
+    var emalladd=document.getElementById("emailadd");
+    var descrip=document.getElementById("des");
+    var rrate=document.getElementById("rrate");
+
+    var modal = document.getElementById('myModal');
+    var thanyou = document.getElementById('thankyou');
+
+    var btncancel = document.getElementById("cancel");
+    var btnok = document.getElementById("ok");
+
+
+
+    var btnok1 = document.getElementById("ok1");
+
+    var span = document.getElementsByClassName("close")[0];
+
+
+    btncancel.onclick = function() {
+        modal.style.display = "none";
+    }
+    btnok1.onclick = function() {
+        document.getElementById('thankyou').style.display = "none";
+
+    }
+
+
+    btnok.onclick = function() {
+
+        document.getElementById('thankyou').style.display = "block";
+        modal.style.display = "none";
+        clear();
+    }
+
+
+    function message() {
+        document.getElementById('myModal').style.display = "block";
+
+    }
+
+
+    span.onclick = function() {
+        modal.style.display = "none";
+        thankyou.style.display = "none";
+    }
+
+
+    window.onclick = function(event) {
+
+        if (event.target == thankyou) {
+            thankyou.style.display = "none";
+        }
+    }
+
+    //form validation
+    function formValidation()
+    {
+
+        var uname = document.registration.username;
+
+        var urate = document.registration.rate;
+
+        var uemail = document.registration.email;
+        var dec = document.registration.desc;
+        var userrating="";
+
+
+
+        if(allLetter(uname))
+        {
+            if(ValidateEmail(uemail))
+            {
+                if(ratevalue(urate))
+                {
+                    confirm("User name: " +uname.value+ "\n Email: "+uemail.value+"\n Rating "+urate.value);
+
+
+                    message();
+                    username.innerHTML="User name: " +uname.value;
+                    emalladd.innerHTML="Email address: " +uemail.value;
+                    descrip.innerHTML="Comment: "+dec.value;
+                    rrate.innerHTML="User rating: "+urate.value;
+
+                }
+            }
+        }
+
+
+
+        return false;
+
+    }
+    
+    //string validation
+    function allLetter(uname)
+    {
+        var letters = /^[A-Za-z]+$/;
+        if(uname.value.match(letters))
+        {
+            return true;
+        }
+        else
+        {
+            alert('Username can only contain alphabet characters');
+            uname.focus();
+            return false;
+        }
+    }
+
+
+
+    function ratevalue(urate)
+    {
+        if(urate.value == "Default")
+        {
+            alert('Please select your rating');
+            urate.focus();
+            return false;
+        }
+        else
+        {
+            return true;
+
+        }
+    }
+
+
+    function ValidateEmail(uemail)
+    {
+        var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(uemail.value.match(emailformat))
+        {
+            return true;
+        }
+        else
+        {
+            alert("Please enter a valid email address!");
+            uemail.focus();
+            return false;
+        }
+    }
+//to clear entered fields
+    function clear(){
+        document.registration.username.value="";
+        document.registration.email.value=""
+        document.registration.desc.value=""
+        document.registration.rate.value="Default"
+    }
+
+</script>
+</body>
+</html>

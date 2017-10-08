@@ -1,0 +1,522 @@
+
+<!doctype html>
+<html>
+<head>
+<title>MainShop</title>    
+    
+    <style>
+        
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:white;
+    }
+        
+h1{
+    font-family: Papyrus, fantasy;
+    background-color: black;
+    color: white;
+    text-align:left;
+    font-size: 40px;
+    margin: 0px 117px 10px 80px;
+    padding: 16px 32px;
+
+}
+h3{
+    color: aliceblue;
+    background-color: black;
+    font-family: Papyrus, fantasy;
+    text-align: center;
+    font-size: 30px;
+ 
+        }
+.logo{
+    margin-top:-2.74cm;
+    float: left;
+    
+    width: 95px;
+    height: 94px;
+            
+        }
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 38px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    margin-left: 34.55cm;
+    margin-top: -2.74cm;
+    position: absolute;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+        
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: auto;
+  position: relative;
+  margin: auto;
+  height: 620px;
+}
+
+/* Caption text */
+.text {
+  background-color: black;
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.img{
+   width: 1424px;
+    height: 670px;
+ }
+p{
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: center;
+            
+}
+.list{
+    float: right;
+            
+        }
+.goUp{
+    float: left;
+    clear: both;
+    margin-bottom: 1cm;
+    background-color:black;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+a:link{
+    text-decoration: none;
+    }
+        
+    </style>
+    
+</head>
+<body>
+
+<h1 id="Up">Ella Rock</h1>
+
+<div class="dropdown">
+<button class="dropbtn">Go to</button>
+<div class="dropdown-content">
+<a href="Byproducts.html">Tours and Packages</a>
+<a href="Quiz.html">Quiz</a>
+<a href="Comments.html">Add a Comment</a>
+<a href="StudentDetails.html">Student Details</a>
+<a href="Sitemap.html">Site Map</a>
+    
+</div>
+</div> 
+
+<div class="container">
+<a href="MP1.html">
+<img class="logo" src="Images/LOGO.jpg">
+</a>
+</div>    
+
+<div class="slideshow-container">
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img class="img" src="Images/Alla.jpg" style="width:100%" >
+<div class="text">Ella is a small town in the Badulla District of Uva Province, Sri Lanka governed by an Urban Council. It is approximately 200 kilometres east of Colombo and is situated at an elevation of 1,041 metres above sea level.</div>
+</div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img class="img" src="Images/ella2.jpg" style="width:100%">
+    <div class="text">Ella is a wonderful place to trek through, with its breathtaking views and varying landscape. The trails will take you through dense forests, past rivers and cascading waterfalls and into nearby villages, where you can share their lifestyle and culture during your brief sojourn.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img class="img" src="Images/meemuer4.jpg" style="width:100%">
+    <div class="text">Let some music around a mesmerizing bonfire take away the pain of your hiking bruises.</div>
+  </div>
+
+  
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<br>
+<br>
+<h3> About Ella Rock </h3>
+    <p class="Increase" > Ella is a small town in the Badulla District of Uva Province, Sri Lanka governed by an Urban Council. It is approximately 200 kilometres east of Colombo and is situated at an elevation of 1,041 metres above sea level.Ella is a wonderful place to trek through, with its breathtaking views and varying landscape. The trails will take you through dense forests, past rivers and cascading waterfalls and into nearby villages, where you can share their lifestyle and culture during your brief sojourn.</p>
+    <button onclick="IncreaseF()" >Increase</button>
+    <button onclick="DecreaseF()" >Decrease</button>
+    
+<h3> Plan Your Trip</h3>    
+<form action="#" name="Travelplan" onsubmit="todo();">
+
+<table cellpadding="2" width="20%"  align="left"
+cellspacing="2">
+
+<tr>
+<td colspan=2>
+<center><font size=4><b>Please Fill the form</b></font></center>
+</td>
+</tr>
+
+<tr>
+<td>Name</td>
+<td><input type=text name=textnames id="textname" size="30"></td>
+</tr>
+
+<tr>
+<td>Postal Address</td>
+<td><input type="text" name="paddress" id="paddress" size="30"></td>
+</tr>
+
+<tr>
+<td>Personal Address</td>
+<td><input type="text" name="personaladdress"
+id="personaladdress" size="30"></td>
+</tr>
+
+<tr>
+<td>Sex</td>
+<td><input type="radio" name="sex" value="male" size="10">Male
+<input type="radio" name="sex" value="Female" size="10">Female</td>
+</tr>
+
+<tr>
+<td>Number of persons</td>
+<td><select id="Persons" name="Persons">
+<option value="-1" selected>select..</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select></td>
+</tr>
+
+<tr>
+<td>Number of Days</td>
+<td><select id="Days" name="Days">
+<option value="-1" selected>select..</option>
+<option value="3">3 Days</option>
+<option value="4">4 Days</option>
+<option value="5">5 Days</option>
+</select></td>
+</tr>
+
+<tr>
+<td>Accomodation Type</td>
+<td><select id="Accomodation" name="Accomodation">
+<option value="-1" selected>select..</option>
+<option value="150">Luxury</option>
+<option value="100">Moderate</option>
+<option value="75">Bugdjet Friendly</option>
+</select></td>
+
+</tr>
+    
+    
+<tr>
+<td>EmailId</td>
+<td><input type="text" name="emailid" id="emailid" size="30"></td>
+</tr>
+
+<tr>
+<td>DOB</td>
+<td><input type="text" name="dob" id="dob" size="30"></td>
+</tr>
+
+<tr>
+<td>MobileNo</td>
+<td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+</tr>
+<tr>
+<td><input type="reset"></td>
+<td colspan="2"><input type="submit" value="Submit Form" /></td>
+</tr>
+</table>
+</form>
+
+    
+<div class="list">
+<h2>Price List</h2>
+
+<ul>
+  <li>3 Days tour plan For 1 person</li>
+ 
+    <ul>Luxury Accomodations
+    <li>$450</li>
+    </ul>
+    <ul>Moderate Accomodations
+        <li>$300</li>
+    </ul>
+    <ul>Budjet Friendly Accomodations
+        <li>$225</li>
+    </ul>
+  
+  <li>4 Days tour plan For 1 person</li>
+    <ul>Luxury Accomodations
+    <li>$600</li>
+    </ul>
+    <ul>Moderate Accomodations
+        <li>$400</li>
+    </ul>
+    <ul>Budjet Friendly Accomodations
+        <li>$300</li>
+    </ul>
+  <li>5 Days tour plan For 1 person</li>
+    <ul>Luxury Accomodations
+    <li>$750</li>
+    </ul>
+    <ul>Moderate Accomodations
+        <li>$500</li>
+    </ul>
+    <ul>Budjet Friendly Accomodations
+        <li>$375</li>
+    </ul>
+    </ul>
+
+</div>  
+    
+    <a class="goUp" href='#Up'>Go up</a>
+    
+    
+    
+<script>
+//function to increasethe font size
+var fntI = 16;
+function IncreaseF(){
+    fntI += 2;
+    
+    if(fntI>25){
+        fntI=25;
+    }
+    var fnt = document.getElementsByClassName("Increase");
+    for(var i=0; i<fnt.length;i++){
+        fnt[i].setAttribute("style","font-size:"+fntI+"px");
+    }
+}
+
+//function to decrease the font size
+function DecreaseF(){
+    fntI -= 2;
+    
+    if(fntI<10){
+        fntI=10;
+    }
+    var fnt = document.getElementsByClassName("Increase");
+    for(var i=0; i<fnt.length;i++){
+        fnt[i].setAttribute("style","font-size:"+fntI+"px");
+    }
+}
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+} 
+    
+
+    
+function validate()
+{ 
+   if( document.Travelplan.textnames.value == "" )
+   {
+     alert( "Please provide your Name!" );
+     document.Travelplan.textnames.focus() ;
+     return false;
+   }
+   
+   if( document.Travelplan.paddress.value == "" )
+   {
+     alert( "Please provide your Postal Address!" );
+     document.Travelplan.paddress.focus() ;
+     return false;
+   }
+   if( document.Travelplan.personaladdress.value == "" )
+   {
+     alert( "Please provide your Personal Address!" );
+     document.Travelplan.personaladdress.focus() ;
+     return false;
+   }
+   if ( ( Travelplan.sex[0].checked == false ) && ( Travelplan.sex[1].checked == false ) )
+   {
+   alert ( "Please choose your Gender: Male or Female" );
+   return false;
+   }   
+   
+   if( document.Travelplan.Persons.value == "-1" )
+   {
+     alert( "Please provide the number of persons!" );
+    
+     return false;
+   }   
+   if( document.Travelplan.Days.value == "-1" )
+   {
+     alert( "Please provide the number of days!" );
+    
+     return false;
+   }   
+   if( document.Travelplan.Accomodation.value == "-1" )
+   {
+     alert( "Please provide your Accomodation type!" );
+     
+     return false;
+   }
+   
+ var email = document.Travelplan.emailid.value;
+  atpos = email.indexOf("@");
+  dotpos = email.lastIndexOf(".");
+ if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) 
+ {
+     alert("Please enter correct email ID")
+     document.Travelplan.emailid.focus() ;
+     return false;
+ }
+  if( document.Travelplan.dob.value == "" )
+   {
+     alert( "Please provide your DOB!" );
+     document.Travelplan.dob.focus() ;
+     return false;
+   }
+  if( document.Travelplan.mobileno.value == "" ||
+           isNaN( document.Travelplan.mobileno.value) ||
+           document.Travelplan.mobileno.value.length != 10 )
+   {
+     alert( "Please provide a Mobile No in the format 123." );
+     document.Travelplan.mobileno.focus() ;
+     return false;
+   }
+   return true;
+}    
+
+
+function bill()
+{
+      var total = 0;
+   var person = document.getElementById("Persons").value;
+   var days = document.getElementById("Days").value;
+   var Acc = document.getElementById("Accomodation").value;
+   total = person*days*Acc;
+    alert("Congratz!! \n Your trip to Ella is set !! \n Your name is "+document.Travelplan.textnames.value +"\n Your bill is $" +total +
+         "\n The bill is set for "+document.Travelplan.Persons.value + "persons in "+document.Travelplan.Accomodation.options[Accomodation.selectedIndex].text+ 
+          " mode for "+document.Travelplan.Days.options[Days.selectedIndex].text+" days.");
+}
+    
+function todo() 
+    {
+    if(validate()==true){
+           bill(); 
+        }
+        }
+    
+    
+    
+
+    
+</script>
+    </body>
+</html>
